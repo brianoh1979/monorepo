@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/openjdk:19.0.2
+      - image: circleci/openjdk:8
     steps:
       - checkout
       - run:
@@ -57,7 +57,7 @@ jobs:
 
   gradle-versioning-plugin:
     docker:
-      - image: cimg/openjdk:19.0.2
+      - image: circleci/openjdk:8
     working_directory: ~/project/tools/gradle-plugins/gradle-versioning-plugin
     steps:
       - checkout:
