@@ -81,6 +81,8 @@ jobs:
           POSTGRES_DB: circle_test
     steps:
       - checkout
+      - run: mkdir build
+      - run: mkdir build/test-results
       - run: mkdir build/test-results/test
       - run:
           name: Run tests in parallel
