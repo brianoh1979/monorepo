@@ -110,20 +110,20 @@ jobs:
 #          command:
 #            ./gradlew jacocoTestReport
       - store_test_results:
-          path: build/test-results/test
+          path: build/test-results
       - store_artifacts:
-          path: build/test-results/test
+          path: build/test-results
           when: always
       - store_artifacts:
           path: build/reports/jacoco/test/html
           when: always
-      - run:
-          name: Assemble JAR
-          command: |
-            # Skip this for other nodes
-            if [ "$CIRCLE_NODE_INDEX" == 0 ]; then
-              ./gradlew assemble
-            fi
+#      - run:
+#          name: Assemble JAR
+#          command: |
+#            # Skip this for other nodes
+#            if [ "$CIRCLE_NODE_INDEX" == 0 ]; then
+#              ./gradlew assemble
+#            fi
       # This will be empty for all nodes except the first one
       - store_artifacts:
           path: build/libs
