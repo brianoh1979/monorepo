@@ -105,18 +105,10 @@ jobs:
                 ./gradlew test $GRADLE_ARGS || true
               fi  
             }
-      - run:
-          when: on_fail 
-          name: set workflow to 0 status
-          command: |
-             set +e
-             false
-             true
-             exit 0
-      - run:
-          name: Generate code coverage report
-          command:
-            ./gradlew jacocoTestReport
+#      - run:
+#          name: Generate code coverage report
+#          command:
+#            ./gradlew jacocoTestReport
       - store_test_results:
           path: build/test-results/test
       - store_artifacts:
