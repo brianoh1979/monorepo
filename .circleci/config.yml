@@ -79,6 +79,7 @@ jobs:
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: circle_test
+    resource_class: xlarge
     steps:
       - checkout
       - run: mkdir build
