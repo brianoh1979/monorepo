@@ -1,6 +1,0 @@
-plugins {
-    id 'java'
-    id 'com.zlad.gradle.versioning'
-}
-
-group 'com.zlad.monorepo'
