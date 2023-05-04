@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/openjdk:8
+      - image: cimg/openjdk:19.0.2
     steps:
       - checkout
       - run:
@@ -13,7 +13,7 @@ jobs:
 
   server:
     docker:
-      - image: cimg/openjdk:8
+      - image: cimg/openjdk:19.0.2
     working_directory: ~/project/apps/server
     steps:
       - checkout:
@@ -24,7 +24,7 @@ jobs:
 
   client:
     docker:
-      - image: cimg/openjdk:8
+      - image: cimg/openjdk:19.0.2
     working_directory: ~/project/apps/client
     steps:
       - checkout:
@@ -35,7 +35,7 @@ jobs:
 
   common:
     docker:
-      - image: cimg/openjdk:8
+      - image: cimg/openjdk:19.0.2
     working_directory: ~/project/libs/common
     steps:
       - checkout:
@@ -46,7 +46,7 @@ jobs:
 
   logging:
     docker:
-      - image: cimg/openjdk:8
+      - image: cimg/openjdk:19.0.2
     working_directory: ~/project/libs/logging
     steps:
       - checkout:
