@@ -75,7 +75,7 @@ jobs:
       GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
     docker:
       - image: cimg/openjdk:19.0.2
-      - image: cimg/postgres:15.2.0
+      - image: cimg/postgres:latest
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: circle_test
