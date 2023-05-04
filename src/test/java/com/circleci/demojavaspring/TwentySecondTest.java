@@ -6,7 +6,6 @@ public class TwentySecondTest {
 
     @Test
     public void twentySecondTest() throws InterruptedException {
-        Thread.sleep(20000);
         assertTrue(false);
     }
 
